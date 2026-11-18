@@ -1,7 +1,15 @@
-# @local/dsh-plugin-textfile
+# dsh-textfile-plugin
 
 一个小型 DSH 插件：在**右侧栏**里提供一个文本编辑器，由官方文件预览作为入口。第一版刻意做小，
 后续再扩展（例如 Markdown 预览）。
+
+## 安装
+
+在 DSH 里让 agent 用 `plugin_manager` 的 `install_bundle` 安装：
+
+- **npm 已发布版**：target 传 `dsh-textfile-plugin`（或 `dsh-textfile-plugin@0.1.0`）。
+- **本地开发版**：target 传本目录的绝对路径（会装成 `link`，改完即热替换）。
+- **GitHub 版**：target 传 `github:c23m/dsh-textfile-plugin`。
 
 ## 功能
 
@@ -88,7 +96,7 @@
 重组才生效 —— 用 `plugin_manager` 的 `set_plugin` 把 `include:textfile` 关掉再打开，或重启应用。
 重新加载前先跑 `node --check client.js index.js`。
 
-卸载：`plugin_manager` 的 `remove_bundle`，target `@local/dsh-plugin-textfile`。
+卸载：`plugin_manager` 的 `remove_bundle`，target `dsh-textfile-plugin`。
 
 **UI 文案约定（整个工作区）：** 面板内文案一律中文。插件管理器的元数据单独放在
 `locale/en.json` + `locale/zh.json`，随界面语言显示。

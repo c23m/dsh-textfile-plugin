@@ -1,3 +1,3 @@
 - insert:
     - id: textfile
-      name: '@local/dsh-plugin-textfile'
+      name: 'dsh-textfile-plugin'

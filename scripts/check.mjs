@@ -15,7 +15,7 @@ const check = (condition, message) => {
 }
 
 const manifest = JSON.parse(read('package.json'))
-check(manifest.name === '@local/dsh-plugin-textfile', 'package.json 的 name 应为 @local/dsh-plugin-textfile')
+check(manifest.name === 'dsh-textfile-plugin', 'package.json 的 name 应为 dsh-textfile-plugin')
 check(manifest.dsh?.bundle?.patch === './cordis.patch.yml', 'package.json 缺少或写错 dsh.bundle.patch')
 check(manifest.dsh?.client?.platform === 'web', 'package.json 缺少 dsh.client.platform = web')
 check(manifest.dsh?.client?.immediately === true, 'package.json 缺少 dsh.client.immediately = true')
@@ -34,7 +34,7 @@ for (const file of ['locale/en.json', 'locale/zh.json']) {
 
 const patch = read('cordis.patch.yml')
 check(/- insert:/.test(patch), 'cordis.patch.yml 缺少 insert 段')
-check(patch.includes('@local/dsh-plugin-textfile'), 'cordis.patch.yml 未引用 @local/dsh-plugin-textfile')
+check(patch.includes('dsh-textfile-plugin'), 'cordis.patch.yml 未引用 dsh-textfile-plugin')
 check(/<svg[\s>]/.test(read('icon.svg')), 'icon.svg 不是有效的 SVG')
 
 if (failures.length > 0) {

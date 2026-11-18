@@ -17,12 +17,12 @@
  */
 
 window.__ModuleLoader__.load({
-  id: '@local/dsh-plugin-textfile',
+  id: 'dsh-textfile-plugin',
   factory(require) {
     const React = require('react')
     const h = React.createElement
 
-    const ID = '@local/dsh-plugin-textfile'
+    const ID = 'dsh-textfile-plugin'
     const KIND = 'textfile'
     const SAVE_COMMAND = 'textfile-save'
     const BODY_SLOT = 'sidebar.right.pane.tab'

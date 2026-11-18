@@ -1,9 +1,27 @@
 {
-  "name": "@local/dsh-plugin-textfile",
+  "name": "dsh-textfile-plugin",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "View and save plain-text files from a right-sidebar tab.",
+  "description": "在右侧栏查看并保存纯文本文件的 DSH 插件，由文件预览工具栏的编辑按钮进入。",
+  "author": "c23m",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "text-file",
+    "editor",
+    "markdown",
+    "sidebar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c23m/dsh-textfile-plugin.git"
+  },
+  "homepage": "https://github.com/c23m/dsh-textfile-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/c23m/dsh-textfile-plugin/issues"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -17,6 +35,10 @@
     "locale/*.json",
     "icon.svg"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
