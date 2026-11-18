@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Text File Editor",
+    "description": "Adds a right-sidebar tab that opens, edits, and saves plain-text files in the session workspace."
+  }
+}
