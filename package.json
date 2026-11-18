@@ -1,5 +1,5 @@
 {
-  "name": "dsh-textfile-plugin",
+  "name": "dsh-textfile-editor",
   "version": "0.1.0",
   "type": "module",
   "description": "在右侧栏查看并保存纯文本文件的 DSH 插件，由文件预览工具栏的编辑按钮进入。",
